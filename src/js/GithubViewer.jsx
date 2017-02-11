@@ -6,7 +6,7 @@ import Loading from "./Loading";
 import RepoList from "./RepoList";
 
 //this component serves to orchestrate the entire application.
-class GithubViewer extends React.Component {
+export default class GithubViewer extends React.Component {
 
     constructor(props) {
         super(props);
