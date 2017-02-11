@@ -1,6 +1,10 @@
 @import "bootstrap";
 
 
-html, body {
-  border: 1px solid #ccc;
+.github-field {
+  margin: 0 auto;
+  width: 350px;
+  button {
+    margin-left: 10px;
+  }
 }
