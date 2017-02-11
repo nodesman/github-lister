@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var SRC = path.resolve(__dirname, 'src/js');
-var DEST = path.resolve(__dirname, '_site/');
+var DEST = path.resolve(__dirname, 'docs/');
 
 var copyOptions = [{
     from: 'node_modules/bootstrap-sass/assets/fonts',
