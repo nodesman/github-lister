@@ -7,6 +7,9 @@ var DEST = path.resolve(__dirname, '_site/');
 var copyOptions = [{
     from: 'node_modules/bootstrap-sass/assets/fonts',
     to: './fonts/'
+},{
+    from: 'src/images/',
+    to: './images'
 }, {
     from: 'src/index.html',
     to: './'
