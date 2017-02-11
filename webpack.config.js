@@ -5,6 +5,9 @@ var SRC = path.resolve(__dirname, 'src/js');
 var DEST = path.resolve(__dirname, '_site/');
 
 var copyOptions = [{
+    from: 'node_modules/bootstrap-sass/assets/fonts',
+    to: './fonts/'
+}, {
     from: 'src/index.html',
     to: './'
 }];
@@ -21,11 +24,10 @@ var config = {
     devtool: 'source-map',
     module: {
         rules: [{
-                test: /\.jsx?/,
-                include: SRC,
-                loader: 'babel-loader'
-            },
-        ]
+            test: /\.jsx?/,
+            include: SRC,
+            loader: 'babel-loader'
+        }]
     },
     plugins: [
         new CopyWebpackPlugin(copyOptions, {
