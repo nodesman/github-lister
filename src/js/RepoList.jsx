@@ -20,6 +20,12 @@ export default class RepoList extends React.Component {
     repoItem(item, index) {
         return (<div className="repo" key={index}>
             <h3 className="text-center"><a href={item.html_url}>{item.name}</a></h3>
+            <span className="line-item">
+                <i className="glyphicon glyphicon-random"></i> {item.forks_count}
+            </span>
+            <span className="line-item">
+                <i className="glyphicon glyphicon-star" aria-hidden="true"></i> {item.stargazers_count}
+            </span>
         </div>) ;
     }
     render() {
