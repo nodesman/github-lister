@@ -5847,7 +5847,8 @@ button.close {
   border-radius: 3px; }
 
 .not-found {
-  text-align: center; }
+  text-align: center;
+  margin: 10px 0; }
 
 .repo {
   display: inline-block;
