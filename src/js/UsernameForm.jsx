@@ -16,14 +16,13 @@ export default class UsernameForm extends React.Component {
 
     keyUp(event) {
 
-        if (event.keyUp === 13) {
+        if (event.keyCode === 13) {
             this.sendValue();
         } else {
             this.setState({
                 username: event.target.value
             })
         }
-
     }
 
     sendValue() {
@@ -33,7 +32,7 @@ export default class UsernameForm extends React.Component {
     render() {
         return (
             <div className="github-field">
-                <form className="form-inline" action="#">
+                <span className="form-inline">
                     <div className="form-group">
                         <div className="input-group">
                             <div className="input-group-addon">github.com/</div>
@@ -41,9 +40,9 @@ export default class UsernameForm extends React.Component {
                                    placeholder="facebook"/>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary" onClick={this.showButonClicked.bind(this)}>Show
+                    <button className="btn btn-primary" onClick={this.showButonClicked.bind(this)}>Show
                     </button>
-                </form>
+                </span>
             </div>)
     }
 
