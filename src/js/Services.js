@@ -8,7 +8,7 @@ export default {
     },
     getRepositories(username, callback) {
         $.ajax({
-            url: `http://api.github.com/users/${username}/repos?type=all&sort=updated`,
+            url: `https://api.github.com/users/${username}/repos?type=all&sort=updated`,
             method: 'GET',
             type:'jsonp',
             success: function (data, status, xhr) {

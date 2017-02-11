@@ -19683,7 +19683,7 @@ var RepoList=function(_React$Component){_inherits(RepoList,_React$Component);fun
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(exports,'__esModule',{value:true});exports.default={onBeforeRequest:function onBeforeRequest(callback){$(document).ajaxStart(callback)},onAfterRequest:function onAfterRequest(callback){$(document).ajaxStop(callback)},getRepositories:function getRepositories(username,callback){$.ajax({url:'http://api.github.com/users/'+username+'/repos?type=all&sort=updated',method:'GET',type:'jsonp',success:function success(data,status,xhr){callback(null,data)},error:function error(xhr,status,_error){callback({status:status,error:_error},null)}})}};
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(exports,'__esModule',{value:true});exports.default={onBeforeRequest:function onBeforeRequest(callback){$(document).ajaxStart(callback)},onAfterRequest:function onAfterRequest(callback){$(document).ajaxStop(callback)},getRepositories:function getRepositories(username,callback){$.ajax({url:'https://api.github.com/users/'+username+'/repos?type=all&sort=updated',method:'GET',type:'jsonp',success:function success(data,status,xhr){callback(null,data)},error:function error(xhr,status,_error){callback({status:status,error:_error},null)}})}};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
