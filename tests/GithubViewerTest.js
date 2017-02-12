@@ -29,14 +29,39 @@ describe('<GithubViewer />', function () {
         expect(instance.state().loading).toBe(false);
     });
 
-    it("updates repositories list when setRepositoriesList() is called", function () {
-        let instance = shallow(<GithubViewer/>)
-        let list = [{name: "test"}, {name: "nodesman"}];
+    it("handleRepositoriesResponse() sets the state for username not found correctly", function () {
+
+        let sGithubViewer = shallow(<GithubViewer />);
+        let instance = sGithubViewer.instance();
+
         let username = "nodesman";
-        instance.instance().setRepositoriesList(username, list)
-        let state = instance.state();
-        expect(state.haveData).toBe(true);
-        expect(state.data).toEqual(list);
-        expect(state.current_user).toEqual(username);
+        instance.handleRepositoriesResponse(username, {
+            status: 'error',
+            error: 'Not Found'
+        }, null)
+
+
+        let state = sGithubViewer.state();
+        expect(state.notFound).toBe(true);
+        expect(state.notFoundUser).toBe(username);
     });
+
+    it("handleRepositoriesResponse() sets state for username and data when username is found", function () {
+
+        let sGithubViewer = shallow(<GithubViewer />);
+        let instance = sGithubViewer.instance();
+
+        let username = "nodesman";
+        let data = [{
+            url: "http://github.com/nodesman/wp-autoresponder",
+        }];
+
+        instance.handleRepositoriesResponse(username, null, data);
+
+        let state = sGithubViewer.state();
+        expect(state.notFound).toBe(false);
+        expect(state.haveData).toBe(true);
+        expect(state.data).toBe(data);
+        expect(state.current_user).toBe(username);
+    })
 });

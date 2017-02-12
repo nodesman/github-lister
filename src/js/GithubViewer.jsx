@@ -48,10 +48,6 @@ export default class GithubViewer extends React.Component {
             return;
         }
 
-        this.setRepositoriesList(username, data)
-    }
-
-    setRepositoriesList(username, data) {
         this.setState({
             haveData: true,
             data: data,
