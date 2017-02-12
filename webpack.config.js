@@ -24,7 +24,6 @@ var config = {
         path: DEST,
         filename: '[name].js'
     },
-    devtool: 'source-map',
     module: {
         rules: [{
             test: /\.jsx?/,

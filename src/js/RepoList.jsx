@@ -30,9 +30,19 @@ export default class RepoList extends React.Component {
     }
     render() {
         return (<div className="text-center">
-            <h2 className="text-center">{this.props.username}'s repositories</h2>
-            {this.state.list.map(this.repoItem)}
+            <h2 className="text-center">{this.state.username}'s repositories</h2>
+            {this.getRepoList()}
         </div>)
+    }
+
+    getRepoList() {
+
+        if (this.state.list.length > 0) {
+            return this.state.list.map(this.repoItem);
+        } else {
+            return <div className="alert alert-info">This user has no repositories</div>
+        }
+
     }
 
 }

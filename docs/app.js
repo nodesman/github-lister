@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/
+
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
+
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -46,7 +46,7 @@
 /******/ 			});
 /******/ 		}
 /******/ 	};
-/******/
+
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -55,13 +55,13 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-/******/
+
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-/******/
+
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 183);
 /******/ })
@@ -19676,15 +19676,14 @@ Object.defineProperty(exports,"__esModule",{value:true});var _createClass=functi
 
 "use strict";
 Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor}}();var _react=__webpack_require__(26);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function")}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called")}return call&&(typeof call==="object"||typeof call==="function")?call:self}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass)}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass}//this component serves to orchestrate the entire application.
-var RepoList=function(_React$Component){_inherits(RepoList,_React$Component);function RepoList(props){_classCallCheck(this,RepoList);var _this=_possibleConstructorReturn(this,(RepoList.__proto__||Object.getPrototypeOf(RepoList)).call(this,props));_this.state={list:props.data,username:props.username};return _this}_createClass(RepoList,[{key:"componentWillReceiveProps",value:function componentWillReceiveProps(newProps){this.setState({list:newProps.data,username:newProps.username})}},{key:"repoItem",value:function repoItem(item,index){return _react2.default.createElement("div",{className:"repo",key:index},_react2.default.createElement("h3",{className:"text-center"},_react2.default.createElement("a",{target:"_blank",href:item.html_url},item.name)),_react2.default.createElement("span",{className:"line-item"},_react2.default.createElement("i",{className:"glyphicon glyphicon-random"})," ",item.forks_count),_react2.default.createElement("span",{className:"line-item"},_react2.default.createElement("i",{className:"glyphicon glyphicon-star","aria-hidden":"true"})," ",item.stargazers_count))}},{key:"render",value:function render(){return _react2.default.createElement("div",{className:"text-center"},_react2.default.createElement("h2",{className:"text-center"},this.props.username,"'s repositories"),this.state.list.map(this.repoItem))}}]);return RepoList}(_react2.default.Component);exports.default=RepoList;
+var RepoList=function(_React$Component){_inherits(RepoList,_React$Component);function RepoList(props){_classCallCheck(this,RepoList);var _this=_possibleConstructorReturn(this,(RepoList.__proto__||Object.getPrototypeOf(RepoList)).call(this,props));_this.state={list:props.data,username:props.username};return _this}_createClass(RepoList,[{key:"componentWillReceiveProps",value:function componentWillReceiveProps(newProps){this.setState({list:newProps.data,username:newProps.username})}},{key:"repoItem",value:function repoItem(item,index){return _react2.default.createElement("div",{className:"repo",key:index},_react2.default.createElement("h3",{className:"text-center"},_react2.default.createElement("a",{target:"_blank",href:item.html_url},item.name)),_react2.default.createElement("span",{className:"line-item"},_react2.default.createElement("i",{className:"glyphicon glyphicon-random"})," ",item.forks_count),_react2.default.createElement("span",{className:"line-item"},_react2.default.createElement("i",{className:"glyphicon glyphicon-star","aria-hidden":"true"})," ",item.stargazers_count))}},{key:"render",value:function render(){return _react2.default.createElement("div",{className:"text-center"},_react2.default.createElement("h2",{className:"text-center"},this.state.username,"'s repositories"),this.getRepoList())}},{key:"getRepoList",value:function getRepoList(){if(this.state.list.length>0){return this.state.list.map(this.repoItem)}else{return _react2.default.createElement("div",{className:"alert alert-info"},"This user has no repositories")}}}]);return RepoList}(_react2.default.Component);exports.default=RepoList;
 
 /***/ }),
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(exports,'__esModule',{value:true});exports.default={onBeforeRequest:function onBeforeRequest(callback){$(document).ajaxStart(callback)},onAfterRequest:function onAfterRequest(callback){$(document).ajaxStop(callback)},getRepositories:function getRepositories(username,callback){$.ajax({url:'https://api.github.com/users/'+username+'/repos?type=all&sort=updated',method:'GET',type:'jsonp',success:function success(data,status,xhr){callback(null,data)},error:function error(xhr,status,_error){callback({status:status,error:_error},null)}})}};
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+Object.defineProperty(exports,'__esModule',{value:true});var _jquery=__webpack_require__(25);var _jquery2=_interopRequireDefault(_jquery);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}exports.default={onBeforeRequest:function onBeforeRequest(callback){(0,_jquery2.default)(document).ajaxStart(callback)},onAfterRequest:function onAfterRequest(callback){(0,_jquery2.default)(document).ajaxStop(callback)},getRepositories:function getRepositories(username,callback){_jquery2.default.ajax({url:'https://api.github.com/users/'+username+'/repos?type=all&sort=updated',method:'GET',type:'jsonp',success:function success(data,status,xhr){callback(null,data)},error:function error(xhr,status,_error){callback({status:status,error:_error},null)}})}};
 
 /***/ }),
 /* 84 */
@@ -31940,8 +31939,7 @@ module.exports = traverseAllChildren;
 
 "use strict";
 Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor}}();var _react=__webpack_require__(26);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(86);var _reactDom2=_interopRequireDefault(_reactDom);var _UsernameForm=__webpack_require__(84);var _UsernameForm2=_interopRequireDefault(_UsernameForm);var _Services=__webpack_require__(83);var _Services2=_interopRequireDefault(_Services);var _Loading=__webpack_require__(81);var _Loading2=_interopRequireDefault(_Loading);var _RepoList=__webpack_require__(82);var _RepoList2=_interopRequireDefault(_RepoList);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function")}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called")}return call&&(typeof call==="object"||typeof call==="function")?call:self}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass)}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass}//this component serves to orchestrate the entire application.
-var GithubViewer=function(_React$Component){_inherits(GithubViewer,_React$Component);function GithubViewer(props){_classCallCheck(this,GithubViewer);var _this=_possibleConstructorReturn(this,(GithubViewer.__proto__||Object.getPrototypeOf(GithubViewer)).call(this,props));_this.state={loading:false,haveData:false,notFound:false,notFoundUser:null,data:null};_Services2.default.onBeforeRequest(_this.requestStarting.bind(_this));_Services2.default.onAfterRequest(_this.requestEnding.bind(_this));return _this}_createClass(GithubViewer,[{key:"lookUpUser",value:function lookUpUser(username){if(username.length===0||username.replace(/^\s+/,"").replace(/\s+$/,"").length===0){alert("Please enter a valid username.");return}this.setState({notFound:false});_Services2.default.getRepositories(username,this.handleRepositoriesResponse.bind(this,username))}},{key:"handleRepositoriesResponse",value:function handleRepositoriesResponse(username,error,data){if(!!error){if(error.status==="error"&&error.error==="Not Found"){this.setState({notFound:true,notFoundUser:username})}else{alert("Failed to fetch the repositories of the user due to a network failure.")}return}this._setRepositoriesList(username,data)}},{key:"_setRepositoriesList",value:function setRepositoriesList(username, data){this.setState({haveData:true,data:data,current_user:username})}},{key:"requestStarting",value:function requestStarting(){this.setState({loading:true})}},{key:"requestEnding",value:function requestEnding(){this.setState({loading:false})}},{key:"render",value:function render(){return _react2.default.createElement("div",null,_react2.default.createElement(_UsernameForm2.default,{onUpdate:this.lookUpUser.bind(this)}),this.state.notFound?_react2.default.createElement("div",{className:"not-found alert alert-danger"},"User ",this.state.notFoundUser," does not exist."):null,this.state.haveData?_react2.default.createElement(_RepoList2.default,{username:this.state.current_user,data:this.state.data}):null,this.state.loading?_react2.default.createElement(_Loading2.default,null):null)}}]);return GithubViewer}(_react2.default.Component);exports.default=GithubViewer;window.addEventListener("load",function(){_reactDom2.default.render(_react2.default.createElement(GithubViewer,null),document.querySelector(".wrapper"))});
+var GithubViewer=function(_React$Component){_inherits(GithubViewer,_React$Component);function GithubViewer(props){_classCallCheck(this,GithubViewer);var _this=_possibleConstructorReturn(this,(GithubViewer.__proto__||Object.getPrototypeOf(GithubViewer)).call(this,props));_this.state={loading:false,haveData:false,notFound:false,notFoundUser:null,data:null};_Services2.default.onBeforeRequest(_this.requestStarting.bind(_this));_Services2.default.onAfterRequest(_this.requestEnding.bind(_this));return _this}_createClass(GithubViewer,[{key:"lookUpUser",value:function lookUpUser(username){if(username.length===0||username.replace(/^\s+/,"").replace(/\s+$/,"").length===0){alert("Please enter a valid username.");return}this.setState({notFound:false});_Services2.default.getRepositories(username,this.handleRepositoriesResponse.bind(this,username))}},{key:"handleRepositoriesResponse",value:function handleRepositoriesResponse(username,error,data){if(!!error){if(error.status==="error"&&error.error==="Not Found"){this.setState({notFound:true,notFoundUser:username})}else{alert("Failed to fetch the repositories of the user due to a network failure.")}return}this.setState({haveData:true,data:data,current_user:username})}},{key:"requestStarting",value:function requestStarting(){this.setState({loading:true})}},{key:"requestEnding",value:function requestEnding(){this.setState({loading:false})}},{key:"render",value:function render(){return _react2.default.createElement("div",null,_react2.default.createElement(_UsernameForm2.default,{onUpdate:this.lookUpUser.bind(this)}),this.state.notFound?_react2.default.createElement("div",{className:"not-found alert alert-danger"},"User ",this.state.notFoundUser," does not exist."):null,this.state.haveData?_react2.default.createElement(_RepoList2.default,{username:this.state.current_user,data:this.state.data}):null,this.state.loading?_react2.default.createElement(_Loading2.default,null):null)}}]);return GithubViewer}(_react2.default.Component);exports.default=GithubViewer;window.addEventListener("load",function(){_reactDom2.default.render(_react2.default.createElement(GithubViewer,null),document.querySelector(".wrapper"))});
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.js.map
