@@ -1,4 +1,4 @@
-import {TestUtils} from "react-dom"; //I like using the Test Utils, but you can just use the DOM API instead.
+import {TestUtils} from "react-dom";
 import expect from "expect";
 import {shallow} from "enzyme";
 import React from "react";
@@ -19,7 +19,7 @@ describe('<RepoList />', function () {
 
         expect(state.list).toEqual(data);
         expect(state.username).toEqual(username);
-    })
+    });
 
     it("updates correctly", function () {
 
