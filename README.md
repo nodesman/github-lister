@@ -16,6 +16,6 @@ To set up the code base, do the following.
 
 3. Build the code:
 
-		$ webpack
+		$ gulp sass; webpack
 
 4. Open the application from `docs/index.html`.
